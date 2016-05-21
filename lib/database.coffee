@@ -1,6 +1,8 @@
 Sequelize = require('sequelize');
 
-sequelize = new Sequelize(process.env.DATABASE_URL or 'sqlite://memory');
+sequelize = new Sequelize('test', null, null, {
+  dialect: 'sqlite'
+});
 
 require('./model/v1')(sequelize)
 
