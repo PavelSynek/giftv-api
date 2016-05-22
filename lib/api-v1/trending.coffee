@@ -5,7 +5,7 @@ async = require('async')
 app = new Router()
 
 app.get('/', (req, res, next)->
-  request('http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=3', {json: true}, (error, response, body)->
+  request('http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC', {json: true}, (error, response, body)->
     async.map(body.data,
       (gif, done)->
         request("https://api.spotify.com/v1/search?type=track&limit=1&offset=0&q=#{getQuery gif.slug}", {json: true}, (error, response, body)->
