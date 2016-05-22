@@ -4,7 +4,8 @@
   "description": "Backend for GifTV",
   "main": "web.coffee",
   "scripts": {
-    "test": "exit 0"
+    "test": "exit 0",
+    "start": "node web.js"
   },
   "author": "Pavel Synek",
   "license": "MIT",
