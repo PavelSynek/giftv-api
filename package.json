@@ -4,7 +4,7 @@
   "description": "Backend for GifTV",
   "main": "web.coffee",
   "scripts": {
-    "test": "exit 0",
+    "test": "mocha test",
     "start": "node web.js"
   },
   "author": "Pavel Synek",
@@ -17,5 +17,9 @@
     "request-promise": "^3.0.0",
     "sequelize": "^3.23.2",
     "sqlite3": "^3.1.4"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "supertest": "^1.2.0"
   }
 }
