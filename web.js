@@ -6,7 +6,7 @@
 
   api = require('./lib/api');
 
-  database.drop().sync().then(function() {
+  database.sync().then(function() {
     var port;
     port = process.env.PORT || 5000;
     return api.listen(port, function(err) {
